@@ -1,6 +1,6 @@
 # saber-tap
 
-一个让移动端支持无延迟点击的小模块，基于 `[FastClick](https://github.com/ftlabs/fastclick)`。
+一个让移动端支持无延迟点击的小模块，基于 [`FastClick`](https://github.com/ftlabs/fastclick)。
 
 *This project is forked from `ftlabs/fastclick`*
 
