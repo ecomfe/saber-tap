@@ -763,10 +763,14 @@ define(function( require ) {
     /**
      * Factory method for creating a Tap object
      * 
-     * @param {HTMLElement} layer The layer to listen on
+     * @param {HTMLElement|string} layer The layer to listen on
      * @return {Tap}
      */
     Tap.mixin = function( layer ) {
+        if ( typeof layer === 'string' ) {
+            layer = document.getElementById( layer );
+        }
+
         return new Tap( layer );
     };
 
