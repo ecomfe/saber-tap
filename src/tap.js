@@ -50,6 +50,13 @@ define(function( require ) {
      */
     var isChrome = /Chrome\/[0-9]+/.test( UA );
 
+    /**
+     * UC Browser requires exceptions.
+     * 
+     * @type {boolean}
+     */
+    var isUC = UA.indexOf( 'UCBrowser' ) > 0;
+
 
     /**
      * Check whether Tap is needed.
@@ -62,8 +69,8 @@ define(function( require ) {
             return true;
         }
 
-        // Android Chrome doesn't need Tap
-        if ( isChrome && isAndroid ) {
+        // Android Chrome & UCBrowser doesn't need Tap
+        if ( isAndroid && ( isChrome || isUC ) ) {
             return true;
         }
 
