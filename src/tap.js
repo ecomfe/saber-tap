@@ -321,7 +321,6 @@ define(function( require ) {
      * @return {boolean}
      */
     Tap.prototype.onClick = function( event ) {
-        console.log( 'click' );
         // It's possible for another Tap-like library delivered with
         // third-party code to fire a click event before Tap does.
         // In that case, set the click-tracking flag back to false and
@@ -361,7 +360,6 @@ define(function( require ) {
      * @return {boolean}
      */
     Tap.prototype.onTouchStart = function( event ) {
-        console.log( 'touchstart' );
         // Ignore multiple touches
         if ( event.targetTouches.length > 1 ) {
             return true;
@@ -451,7 +449,6 @@ define(function( require ) {
      * @return {boolean}
      */
     Tap.prototype.onTouchMove = function( event ) {
-        console.log( 'touchmove' );
         if ( !this.trackingClick ) {
             return true;
         }
@@ -585,7 +582,6 @@ define(function( require ) {
      * @param {Event} event
      */
     Tap.prototype.sendClick = function( targetElement, event ) {
-        console.log( 'send click' );
         // On some Android devices activeElement needs to be blurred
         // otherwise the synthetic click will have no effect
         if ( document.activeElement
@@ -636,7 +632,6 @@ define(function( require ) {
      * @return {boolean}
      */
     Tap.prototype.onTouchEnd = function( event ) {
-        console.log( 'touchend' );
         var targetElement = this.targetElement;
 
         if ( !this.trackingClick ) {
@@ -748,7 +743,6 @@ define(function( require ) {
      * On touch cancel, stop tracking the click.
      */
     Tap.prototype.onTouchCancel = function() {
-        console.log( 'touchcancel' );
         this.trackingClick = false;
         this.targetElement = null;
     };
