@@ -707,7 +707,7 @@ define(function( require ) {
             // otherwise the selector menu won't open.
             if ( !isIOS4 || targetTagName !== 'select' ) {
                 this.targetElement = null;
-                return false;
+                event.preventDefault();
             }
 
             return false;
