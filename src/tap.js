@@ -44,11 +44,12 @@ define(function( require ) {
 
 
     /**
-     * Chrome requires exceptions.
+     * Chrome Core requires exceptions.
      * 
+     * @desc Chrome Core, exclude iOS Chrome (CriOS)
      * @type {boolean}
      */
-    var isChrome = /Chrome\/[0-9]+/.test( UA );
+    var isChromeCore = 'chrome' in window;
 
     /**
      * UC Browser requires exceptions.
@@ -69,8 +70,8 @@ define(function( require ) {
             return true;
         }
 
-        // Android Chrome & UCBrowser doesn't need Tap
-        if ( isAndroid && ( isChrome || isUC ) ) {
+        // Chrome Core && Android UCBrowser doesn't need Tap
+        if ( isChromeCore || ( isAndroid && isUC ) ) {
             return true;
         }
 
