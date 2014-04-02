@@ -1,13 +1,13 @@
 {
     "name": "saber-tap",
-    "version": "0.1.0-3",
+    "version": "0.1.0-4",
     "description": "一个让移动端支持无延迟点击的小模块，基于 FastClick.",
     "main": "tap",
     "maintainers": [
         { "name": "firede", "email": "firede@firede.us" }
     ],
     "dependencies": {
-        "saber-lang": "~0.2.0"
+        "saber-lang": "~0.3.0"
     },
     "license": "MIT",
     "repository": "git://github.com/ecomfe/saber-tap.git",
