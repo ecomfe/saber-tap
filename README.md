@@ -11,7 +11,7 @@
 - viewport 必须设置了 `user-scalable=no`
 - 只支持使用 webkit 内核的手机、平板设备浏览器
 
-## Usage
+## Installation
 
 在满足以上 **前提** 时：
 
@@ -19,7 +19,7 @@
 
     edp import saber-tap
 
-然后：
+## Usage
 
 ```javascript
 // 引入 `saber-tap` 模块
@@ -49,12 +49,12 @@ body {
 
 ## API
 
-### .mixin( layer )
+### Methods
+
+#### mixin( layer )
 
 将 layer 元素内的点击事件换为无延迟点击。
 
+* **layer** `{HTMLElement|string}`
+
 参数 `layer` 为 `DOM元素 <HTMLElement>` 或 `DOM元素的id <string>`。
-
-===
-
-[![Saber](https://f.cloud.github.com/assets/157338/1485433/aeb5c72a-4714-11e3-87ae-7ef8ae66e605.png)](http://ecomfe.github.io/saber/)
