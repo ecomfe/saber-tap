@@ -23,18 +23,18 @@
 
 ```javascript
 // 引入 `saber-tap` 模块
-var Tap = require( 'saber-tap' );
+var Tap = require('saber-tap');
 
 // 特定范围内应用无延迟点击，传入DOM元素或id
-Tap.mixin( 'container' );
+Tap.mixin('container');
 
 // 若想全局应用，可在 `domready` 时传入 `body`
-window.addEventListener( 'load', function() {
-    Tap.mixin( document.body );
+window.addEventListener('load', function() {
+    Tap.mixin(document.body);
 });
 
 // 搞定之后绑定的 click 事件就没有延迟了
-el.addEventListener( 'click', clickHandler );
+el.addEventListener('click', clickHandler);
 ```
 
 因为 `Tap` 会在给定的 `layer` 上使用事件委托，为防止大范围的 `tap-highlight` 效果，推荐加上如下样式：
@@ -51,7 +51,7 @@ body {
 
 ### Methods
 
-#### mixin( layer )
+#### mixin(layer)
 
 将 layer 元素内的点击事件换为无延迟点击。
 
